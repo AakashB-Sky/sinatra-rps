@@ -25,13 +25,9 @@ get("/rock") do
 end
 
 get("/paper") do
-  "
-  You chose paper!
-  "
+  erb(:paper)
 end
 
 get("/scissors") do
-  "
-  You chose scissors!
-  "
+  erb(:scissors)
 end
