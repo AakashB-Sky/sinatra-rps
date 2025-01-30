@@ -7,15 +7,15 @@
 </h2>
 
 <% if @outcome == "won" %>
-  <h2 style="color: green">
+  <h2 class="won">
     We <%= @outcome %>!
   </h2>
 <% elsif @outcome == "lost" %>
-  <h2 style="color: red">
+  <h2 class="lost">
     We <%= @outcome %>!
   </h2>
 <% else %>
-  <h2>
-    We <%= @outcome %>
+  <h2 class="tied">
+    We <%= @outcome %>!
   </h2>
 <% end %>

@@ -44,7 +44,7 @@ get("/scissors") do
   elsif @comp_move == "paper"
     @outcome = "won"
   else @comp_move == "scissors"
-    @outcome = "scissors"
+    @outcome = "tied"
   end
 
   erb(:scissors)
