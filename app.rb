@@ -5,9 +5,10 @@ get("/") do
   erb(:homepage)
 end
 
+moves = ["rock", "paper", "scissors"]
+
 get("/rock") do
 
-  moves = ["rock", "paper", "scissors"]
   @comp_move = moves.sample
 
   if @comp_move == "rock"
@@ -22,9 +23,29 @@ get("/rock") do
 end
 
 get("/paper") do
+  @comp_move = moves.sample
+
+  if @comp_move == "rock"
+    @outcome = "won"
+  elsif @comp_move == "paper"
+    @outcome = "tied"
+  else @comp_move == "scissors"
+    @outcome = "lost"
+  end
+
   erb(:paper)
 end
 
 get("/scissors") do
+  @comp_move = moves.sample
+
+  if @comp_move == "rock"
+    @outcome = "lost"
+  elsif @comp_move == "paper"
+    @outcome = "won"
+  else @comp_move == "scissors"
+    @outcome = "scissors"
+  end
+
   erb(:scissors)
 end
